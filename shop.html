@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KzCube — Магазин</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo small"><img src="assets/logo.png" alt=""><h1>KzCube</h1></div>
+    <nav class="main-nav">
+      <a href="index.html">Басты бет</a>
+      <a href="rules.html">Ережелер</a>
+      <a href="shop.html" class="active">Магазин</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card shop-main">
+      <h2>Магазин сервера</h2>
+      <div class="shop-controls">
+        <button id="shuffle-btn" class="btn">Обновить витрину</button>
+        <div class="cart-info">Корзина: <span id="cart-count">0</span> шт — <span id="cart-sum">0₸</span></div>
+      </div>
+
+      <div id="shop-grid" class="shop-grid"></div>
+
+      <div class="cart-panel card small" id="cart-panel">
+        <h4>Корзина</h4>
+        <ul id="cart-list"></ul>
+        <div class="cart-actions">
+          <button id="checkout-btn" class="btn accent">Оплатить (симуляция)</button>
+          <button id="clear-cart" class="btn ghost">Очистить</button>
+        </div>
+        <small>Реальная оплата: настрой сервер / Kaspi, Qiwi и т.д. (пример Node.js ниже).</small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 KzCube</div>
+  </footer>
+
+  <script src="js/shop.js"></script>
+</body>
+</html>

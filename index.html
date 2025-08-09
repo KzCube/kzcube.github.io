@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KzCube — Главная</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" href="fonts/pixel.ttf" as="font" type="font/ttf" crossorigin>
+</head>
+<body>
+  <div id="bg-stars"></div>
+
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="KzCube logo" />
+      <h1>KzCube</h1>
+      <small>Kazakh Minecraft Community</small>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Басты бет</a>
+      <a href="rules.html">Ережелер</a>
+      <a href="shop.html">Магазин</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div class="hero-left">
+        <h2>Добро пожаловать на KzCube</h2>
+        <p>Наш игровой сервер для казахского комьюнити — PvP, мини-игры, рп и ивенты.</p>
+
+        <div class="server-info">
+          <div>
+            <label>IP сервера</label>
+            <div class="ip-row">
+              <code id="server-ip">PLACEHOLDER_IP</code>
+              <button id="copy-ip" class="btn small">Копировать</button>
+              <button id="qr-btn" class="btn small">QR</button>
+            </div>
+            <div class="version">Версия: <strong>1.20.1</strong></div>
+          </div>
+
+          <div class="status">
+            <label>Статус сервера</label>
+            <div id="server-status">Проверка...</div>
+            <small id="status-note">Если не работает — проверь IP или включи proxy.</small>
+          </div>
+        </div>
+
+        <div class="links">
+          <a href="https://t.me/PLACEHOLDER_CHANNEL" target="_blank" class="btn">TG канал</a>
+          <a href="https://t.me/PLACEHOLDER_CHAT" target="_blank" class="btn ghost">TG чат</a>
+          <a id="tg-bot-link" href="https://t.me/PLACEHOLDER_BOT" target="_blank" class="btn accent">Бот в Telegram</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img class="hero-mock" src="assets/hero-minecraft.png" alt="Minecraft art" />
+      </div>
+    </section>
+
+    <section class="news card">
+      <h3>Последние новости</h3>
+      <ul id="news-list">
+        <li>Загрузка новостей недоступна — подключи RSS/админ-панель.</li>
+      </ul>
+    </section>
+
+    <section class="quick-shop card">
+      <h3>Магазин — быстрый запуск</h3>
+      <p>Нажми кнопку и посмотри случайные товары (рандомная витрина).</p>
+      <button id="open-shop" class="btn big">Открыть магазин</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 KzCube. Барлық құқықтар қорғалған.</div>
+    <div class="footer-links">
+      <a href="rules.html">Ережелер</a>
+      <a href="shop.html">Магазин</a>
+    </div>
+  </footer>
+
+  <!-- Модал для QR -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-body">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <h4>QR для подключения к серверу</h4>
+      <canvas id="qr-canvas" width="240" height="240"></canvas>
+      <p id="qr-caption"></p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
